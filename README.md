@@ -2,7 +2,7 @@
 
 **An autonomous "Red Team" agent that helps Product Managers validate hypotheses in seconds, not weeks.**
 
-[![Streamlit App]([https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ship-or-kill.streamlit.app/](https://pmshiporkill-ddmu5ai4t2zgizhg5upmyn.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pmshiporkill-ddmu5ai4t2zgizhg5upmyn.streamlit.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 🧐 The Problem
