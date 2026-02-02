@@ -21,6 +21,7 @@ In Product Management, the "Discovery Phase" is often plagued by confirmation bi
 ## ⚙️ How It Works (Architecture)
 This tool moves beyond simple "chat" by utilizing **Chain-of-Thought (CoT) Prompting** to force the model into a structured reasoning process.
 
+```mermaid
 graph LR
     A[User Input: Hypothesis] --> B{Agent Brain};
     B -->|Step 1| C[Desirability Check];
