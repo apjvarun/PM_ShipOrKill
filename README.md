@@ -1,37 +1,44 @@
-# AI Product Validator - Varun Gupta
+# ShipOrKill: AI-Powered Product Discovery Agent 🚢
 
-## Overview
+**An autonomous "Red Team" agent that helps Product Managers validate hypotheses in seconds, not weeks.**
 
-This project serves as a practical demonstration of my capabilities as an AI Product Manager. It showcases my ability to leverage AI technologies to solve real-world problems, specifically in the domain of product validation and ideation.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ship-or-kill.streamlit.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## AI Skillsets Demonstrated
+## 🧐 The Problem
+In Product Management, the "Discovery Phase" is often plagued by confirmation bias and slow feedback loops. We fall in love with our solutions before fully validating the problem.
+* **Manual Research is slow:** Scouring Reddit, competitors, and technical docs takes days.
+* **Internal Bias:** It's hard to be objective about your own ideas.
+* **The "Cold Start":** Sometimes the hardest part is just generating the initial hypothesis.
 
-*   **AI Strategy & Product Vision:** Defining the product vision and strategy for AI-powered solutions.
-*   **AI Model Evaluation & Validation:** Evaluating and validating the performance of AI models.
-*   **Data Analysis & Interpretation:** Analyzing and interpreting data to inform product decisions.
-*   **Experimentation & A/B Testing:** Designing and analyzing experiments to optimize AI product performance.
-*   **AI Ethics & Responsible AI:** Ensuring the ethical and responsible use of AI in product development.
-*   **Product Ideation:** Using AI to generate new product ideas and concepts.
-*   **Market Research:** Using AI to automate and improve market research processes.
-*   **User Feedback Analysis:** Analyzing user feedback data to identify areas for product improvement.
+## 💡 The Solution
+**ShipOrKill** is a decision-support agent built on **Google's Gemini 2.0 Flash**. It acts as an objective third-party analyst, instantly evaluating product concepts against the three core lenses of product risk:
 
-## Project Description
+1.  **Desirability (User Value):** Does the market actually care? (Simulates user sentiment analysis).
+2.  **Viability (Business Value):** Is there a business model? (Analyzes competition and monetization).
+3.  **Feasibility (Technical Value):** Can it be built? (Identifies necessary APIs and technical bottlenecks).
 
-The AI Product Validator is a tool designed to assist product managers in evaluating the feasibility and potential of new product ideas. It leverages AI algorithms to analyze market trends, customer feedback, and competitive landscapes to provide data-driven insights.
+## ⚙️ How It Works (Architecture)
+This tool moves beyond simple "chat" by utilizing **Chain-of-Thought (CoT) Prompting** to force the model into a structured reasoning process.
 
-## Key Features
+```mermaid
+graph LR
+    A[User Input: Hypothesis] --> B{Agent Brain};
+    B -->|Step 1| C[Desirability Check];
+    B -->|Step 2| D[Viability Check];
+    B -->|Step 3| E[Feasibility Check];
+    C & D & E --> F[Synthesis & Risk Scoring];
+    F --> G[Strategic Memo Output];
 
-*   **Idea Validation:** Automatically assess the viability of new product ideas.
-*   **Market Analysis:** Identify key market trends and opportunities.
-*   **Competitive Analysis:** Analyze the competitive landscape and identify potential threats.
-*   **Data-Driven Insights:** Provide actionable insights based on data analysis.
+## ⚙️ Key Features
+1. 🚀 Validator Mode: Inputs a raw feature idea and outputs a structured "Go/No-Go" memo, flagging critical risks and technical dependencies.
+2. 💡 Ideator Mode: Overcomes writer's block by generating high-potential, contrarian B2B SaaS ideas for specific domains (e.g., "Healthcare", "Logistics").
+3.  ⚡ Real-time Latency: Built on Gemini 2.0 Flash for near-instant inference, enabling rapid "idea-to-validation" loops.
 
-## Technologies Used
-
-*   Python
-*   Streamlit
-*   Pandas
-*   Scikit-learn (or similar data analysis libraries)
+## 🛠️ Tech Stack
+1. LLM Engine: Google Gemini 2.0 Flash (via google-generativeai SDK).
+2. Frontend: Streamlit (Python-based web framework).
+3. Prompt Engineering: Few-Shot & Chain-of-Thought techniques to enforce "Senior PM" persona constraints.
 
 ## Get Started
 
@@ -39,10 +46,7 @@ The AI Product Validator is a tool designed to assist product managers in evalua
 2.  Install the required dependencies using `pip install -r requirements.txt`.
 3.  Run the application using `streamlit run app.py`.
 
-## Contributing
-
-[Optional: Include information on how others can contribute to the project]
 
 ## License
 
-[Include license information]
+This project is licensed under the MIT License.
