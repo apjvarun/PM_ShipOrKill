@@ -23,12 +23,17 @@ This tool moves beyond simple "chat" by utilizing **Chain-of-Thought (CoT) Promp
 
 ```mermaid
 graph LR
-    A[User Input: Hypothesis] --> B{Agent Brain};
-    B -->|Step 1| C[Desirability Check];
-    B -->|Step 2| D[Viability Check];
-    B -->|Step 3| E[Feasibility Check];
-    C & D & E --> F[Synthesis & Risk Scoring];
-    F --> G[Strategic Memo Output];
+    A["User Input: Hypothesis"] --> B{"Agent Brain"}
+    B -->|"Step 1"| C["Desirability Check"]
+    B -->|"Step 2"| D["Viability Check"]
+    B -->|"Step 3"| E["Feasibility Check"]
+    C --> F["Synthesis & Risk Scoring"]
+    D --> F
+    E --> F
+    F --> G["Strategic Memo Output"]
+
+
+```
 
 ## ⚙️ Key Features
 1. 🚀 Validator Mode: Inputs a raw feature idea and outputs a structured "Go/No-Go" memo, flagging critical risks and technical dependencies.
